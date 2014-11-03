@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WWDChartView.h"
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet WWDChartView *wwdChartView;
 
 @end
 

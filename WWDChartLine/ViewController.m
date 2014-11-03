@@ -17,6 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+
+        
+    [_wwdChartView initWWDChartViewWithYAxisCount:5 andYAxisMaxValue:100.f];
+    NSArray* yValues = [[NSArray alloc]initWithObjects:@"40",@"100",@"20",@"10",@"25",@"30",@"10",@"25",@"30",@"10",@"80",@"30",@"10",@"50",@"30", nil];
+    [_wwdChartView addAnotherChartViewWithArray:yValues inColor:[UIColor grayColor]];
 }
 
 - (void)didReceiveMemoryWarning {
