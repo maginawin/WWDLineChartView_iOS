@@ -286,14 +286,14 @@ CGPoint lastPoint; //最后的节点
 //增大x的间隔,每次50%
 - (void)zoominXInterval{
     _contentScrollX = 0;
-    _xInterval = _xInterval * 0.5;
+    _xInterval = _xInterval * 2;
     [self setNeedsDisplay];
 }
 
 //缩小x的间隔,每次50%
 - (void)zoomoutXInterval{
     _contentScrollX = 0;
-    _xInterval = _xInterval * 2;
+    _xInterval = _xInterval * 0.5;
     [self setNeedsDisplay];
 }
 
