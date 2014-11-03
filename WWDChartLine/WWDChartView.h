@@ -19,6 +19,9 @@
 //添加新的线条
 - (void)addAnotherChartViewWithArray:(NSArray*)addValues inColor:(UIColor*)lineColor;
 
+//添加x轴的值,传入一个NSArray(在添加线段或添加值之间调用,并且第一个元素的值是不会显示的)
+- (void)addXArray:(NSArray*)xArray;
+
 //清除已经存在的chartView
 - (void)clearChartViewExist;
 

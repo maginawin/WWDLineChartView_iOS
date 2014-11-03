@@ -20,7 +20,8 @@
 
         
     [_wwdChartView initWWDChartViewWithYAxisCount:5 andYAxisMaxValue:100.f];
-    NSArray* yValues = [[NSArray alloc]initWithObjects:@"40",@"100",@"20",@"10",@"25",@"30",@"10",@"25",@"30",@"10",@"80",@"30",@"10",@"50",@"30", nil];
+    NSArray* yValues = [[NSArray alloc]initWithObjects:@"40",@"10",@"20",@"10",@"25",@"30",@"10",@"25",@"30",@"10",@"80",@"30",@"10",@"50",@"30", nil];
+    [_wwdChartView addXArray:yValues];
     [_wwdChartView addAnotherChartViewWithArray:yValues inColor:[UIColor grayColor]];
 }
 

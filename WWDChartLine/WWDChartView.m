@@ -20,7 +20,8 @@
 @property (nonatomic, strong) NSMutableArray* allColors;
 @property (nonatomic, strong) NSArray* yValues;
 @property (nonatomic, strong) UIColor* lineColor;
-
+@property (nonatomic, strong) NSMutableArray* xValues;
+@property (nonatomic, strong) NSMutableArray* xLocations;
 
 @end
 
@@ -63,6 +64,8 @@ float autoDiff;
     contentScrollX = 0;
     _allYValues = [[NSMutableArray alloc] init];
     _allColors = [[NSMutableArray alloc] init];
+    _xValues = [[NSMutableArray alloc] init];
+    _xLocations = [[NSMutableArray alloc] init];
     NSLog(@"init method");
 }
 
@@ -111,6 +114,7 @@ float autoDiff;
             CGColorRef cgColorRef = [_lineColor CGColor]; //用UIColor*取得CGColorRef
             CGContextSetStrokeColorWithColor(ctx, cgColorRef);
             NSUInteger yCount = _yValues.count;
+            [_xLocations removeAllObjects];
             if (yCount > 1) {
                 for (int i = 0; i < yCount - 1; i++) {
                     NSLog(@"i:%d,max:%ld",i,(long)xAxisMaxCount);
@@ -124,6 +128,9 @@ float autoDiff;
                     float x2 = xValue2 + LEFT_INTERVAL;
                     float y2 = height - (yValue2 / yPerValue) * yInterval - BOTTOM_INTERVAL;
                     
+                    [_xLocations addObject:[NSString stringWithFormat:@"%f", x2 - 8]];
+                    NSLog(@"xLocations: %d", _xLocations.count);
+                    
                     const CGPoint xyPoints[] = {CGPointMake(x1, y1), CGPointMake(x2, y2)};
                     CGContextStrokeLineSegments(ctx, xyPoints, 2);
                 }
@@ -132,6 +139,16 @@ float autoDiff;
             }
         }
 }
+    
+    //绘制x轴元素的字
+    CGContextSetLineWidth(ctx, 1); //设置画笔线条粗细
+    if (xInterval == 20 && _xValues.count == _xLocations.count + 1) {
+        for(int i = 1; i < _xValues.count; i++){
+            NSString* xValue = [_xValues objectAtIndex:i];
+            float xLocation = [[_xLocations objectAtIndex:i - 1] floatValue];
+            [xValue drawAtPoint:CGPointMake(xLocation, height - BOTTOM_INTERVAL + 4) withAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:13], NSFontAttributeName, [UIColor colorWithRed:90/255.0 green:200/255.0 blue:251/255.0 alpha:1], NSForegroundColorAttributeName, nil]];
+        }
+    }
     
     //处理y轴左边空白
     float leftBlackWidth = LEFT_INTERVAL - 1;
@@ -172,6 +189,9 @@ float autoDiff;
         
         [yAxisText drawAtPoint:CGPointMake(4, height - i * yInterval - BOTTOM_INTERVAL - 8) withAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:13], NSFontAttributeName, [UIColor colorWithRed:90/255.0 green:200/255.0 blue:251/255.0 alpha:1], NSForegroundColorAttributeName, nil]];
     }
+    
+    NSLog(@"%d, %d", _xValues.count, _xLocations.count);
+    
 }
 
 #pragma mark -
@@ -235,6 +255,12 @@ float autoDiff;
     [_allYValues addObject:values];
     [_allColors addObject:color];
     [self setNeedsDisplay];
+}
+
+//添加或更新x轴的值,传入一个NSArray
+- (void)addXArray:(NSArray*)xArray{
+    [_xValues removeAllObjects];
+    [_xValues addObjectsFromArray:xArray];
 }
 
 //清除已经存在的chartView
