@@ -10,6 +10,7 @@
 #import "WWDChartView.h"
 
 @interface ViewController : UIViewController
+- (IBAction)testadd:(id)sender;
 
 @property (weak, nonatomic) IBOutlet WWDChartView *wwdChartView;
 

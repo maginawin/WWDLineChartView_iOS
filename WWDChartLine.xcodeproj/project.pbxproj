@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		081430021A4CF74A0060E01A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 081430011A4CF74A0060E01A /* main.m */; };
+		081430051A4CF74A0060E01A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 081430041A4CF74A0060E01A /* AppDelegate.m */; };
+		0814300B1A4CF74A0060E01A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 081430091A4CF74A0060E01A /* Main.storyboard */; };
+		0814300D1A4CF74A0060E01A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0814300C1A4CF74A0060E01A /* Images.xcassets */; };
+		0814301C1A4CF74A0060E01A /* WwdChartBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0814301B1A4CF74A0060E01A /* WwdChartBarTests.m */; };
+		081430251A4CF89A0060E01A /* WwdChartBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 081430241A4CF89A0060E01A /* WwdChartBar.m */; };
+		081430281A4D13250060E01A /* ViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 081430271A4D13250060E01A /* ViewController2.m */; };
+		0814302B1A4D4EBA0060E01A /* WwdCharBarData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0814302A1A4D4EBA0060E01A /* WwdCharBarData.m */; };
 		08B1CA3E1A0706EB00A772CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B1CA3D1A0706EB00A772CE /* main.m */; };
 		08B1CA411A0706EB00A772CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B1CA401A0706EB00A772CE /* AppDelegate.m */; };
 		08B1CA441A0706EB00A772CE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 08B1CA431A0706EB00A772CE /* ViewController.m */; };
@@ -17,6 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		081430161A4CF74A0060E01A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 08B1CA301A0706EA00A772CE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 08142FFC1A4CF74A0060E01A;
+			remoteInfo = WwdChartBar;
+		};
 		08B1CA521A0706EB00A772CE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 08B1CA301A0706EA00A772CE /* Project object */;
@@ -27,6 +42,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08142FFD1A4CF74A0060E01A /* WwdChartBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WwdChartBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		081430001A4CF74A0060E01A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		081430011A4CF74A0060E01A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		081430031A4CF74A0060E01A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		081430041A4CF74A0060E01A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0814300A1A4CF74A0060E01A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0814300C1A4CF74A0060E01A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		081430151A4CF74A0060E01A /* WwdChartBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WwdChartBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0814301A1A4CF74A0060E01A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0814301B1A4CF74A0060E01A /* WwdChartBarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WwdChartBarTests.m; sourceTree = "<group>"; };
+		081430231A4CF89A0060E01A /* WwdChartBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WwdChartBar.h; sourceTree = "<group>"; };
+		081430241A4CF89A0060E01A /* WwdChartBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WwdChartBar.m; sourceTree = "<group>"; };
+		081430261A4D13250060E01A /* ViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController2.h; sourceTree = "<group>"; };
+		081430271A4D13250060E01A /* ViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController2.m; sourceTree = "<group>"; };
+		081430291A4D4EBA0060E01A /* WwdCharBarData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WwdCharBarData.h; sourceTree = "<group>"; };
+		0814302A1A4D4EBA0060E01A /* WwdCharBarData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WwdCharBarData.m; sourceTree = "<group>"; };
 		08B1CA381A0706EA00A772CE /* WWDChartLine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WWDChartLine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		08B1CA3C1A0706EB00A772CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		08B1CA3D1A0706EB00A772CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -44,6 +75,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		08142FFA1A4CF74A0060E01A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		081430121A4CF74A0060E01A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		08B1CA351A0706EA00A772CE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -61,11 +106,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08142FFE1A4CF74A0060E01A /* WwdChartBar */ = {
+			isa = PBXGroup;
+			children = (
+				081430291A4D4EBA0060E01A /* WwdCharBarData.h */,
+				0814302A1A4D4EBA0060E01A /* WwdCharBarData.m */,
+				081430231A4CF89A0060E01A /* WwdChartBar.h */,
+				081430241A4CF89A0060E01A /* WwdChartBar.m */,
+				081430261A4D13250060E01A /* ViewController2.h */,
+				081430271A4D13250060E01A /* ViewController2.m */,
+				081430031A4CF74A0060E01A /* AppDelegate.h */,
+				081430041A4CF74A0060E01A /* AppDelegate.m */,
+				081430091A4CF74A0060E01A /* Main.storyboard */,
+				0814300C1A4CF74A0060E01A /* Images.xcassets */,
+				08142FFF1A4CF74A0060E01A /* Supporting Files */,
+			);
+			path = WwdChartBar;
+			sourceTree = "<group>";
+		};
+		08142FFF1A4CF74A0060E01A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				081430001A4CF74A0060E01A /* Info.plist */,
+				081430011A4CF74A0060E01A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		081430181A4CF74A0060E01A /* WwdChartBarTests */ = {
+			isa = PBXGroup;
+			children = (
+				0814301B1A4CF74A0060E01A /* WwdChartBarTests.m */,
+				081430191A4CF74A0060E01A /* Supporting Files */,
+			);
+			path = WwdChartBarTests;
+			sourceTree = "<group>";
+		};
+		081430191A4CF74A0060E01A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0814301A1A4CF74A0060E01A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		08B1CA2F1A0706EA00A772CE = {
 			isa = PBXGroup;
 			children = (
 				08B1CA3A1A0706EA00A772CE /* WWDChartLine */,
 				08B1CA541A0706EB00A772CE /* WWDChartLineTests */,
+				08142FFE1A4CF74A0060E01A /* WwdChartBar */,
+				081430181A4CF74A0060E01A /* WwdChartBarTests */,
 				08B1CA391A0706EA00A772CE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -75,6 +166,8 @@
 			children = (
 				08B1CA381A0706EA00A772CE /* WWDChartLine.app */,
 				08B1CA511A0706EB00A772CE /* WWDChartLineTests.xctest */,
+				08142FFD1A4CF74A0060E01A /* WwdChartBar.app */,
+				081430151A4CF74A0060E01A /* WwdChartBarTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,6 +217,41 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		08142FFC1A4CF74A0060E01A /* WwdChartBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 081430211A4CF74A0060E01A /* Build configuration list for PBXNativeTarget "WwdChartBar" */;
+			buildPhases = (
+				08142FF91A4CF74A0060E01A /* Sources */,
+				08142FFA1A4CF74A0060E01A /* Frameworks */,
+				08142FFB1A4CF74A0060E01A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WwdChartBar;
+			productName = WwdChartBar;
+			productReference = 08142FFD1A4CF74A0060E01A /* WwdChartBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		081430141A4CF74A0060E01A /* WwdChartBarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 081430221A4CF74A0060E01A /* Build configuration list for PBXNativeTarget "WwdChartBarTests" */;
+			buildPhases = (
+				081430111A4CF74A0060E01A /* Sources */,
+				081430121A4CF74A0060E01A /* Frameworks */,
+				081430131A4CF74A0060E01A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				081430171A4CF74A0060E01A /* PBXTargetDependency */,
+			);
+			name = WwdChartBarTests;
+			productName = WwdChartBarTests;
+			productReference = 081430151A4CF74A0060E01A /* WwdChartBarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		08B1CA371A0706EA00A772CE /* WWDChartLine */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 08B1CA5B1A0706EB00A772CE /* Build configuration list for PBXNativeTarget "WWDChartLine" */;
@@ -168,6 +296,13 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = mycj.wwd;
 				TargetAttributes = {
+					08142FFC1A4CF74A0060E01A = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					081430141A4CF74A0060E01A = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 08142FFC1A4CF74A0060E01A;
+					};
 					08B1CA371A0706EA00A772CE = {
 						CreatedOnToolsVersion = 6.1;
 					};
@@ -192,11 +327,29 @@
 			targets = (
 				08B1CA371A0706EA00A772CE /* WWDChartLine */,
 				08B1CA501A0706EB00A772CE /* WWDChartLineTests */,
+				08142FFC1A4CF74A0060E01A /* WwdChartBar */,
+				081430141A4CF74A0060E01A /* WwdChartBarTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		08142FFB1A4CF74A0060E01A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0814300B1A4CF74A0060E01A /* Main.storyboard in Resources */,
+				0814300D1A4CF74A0060E01A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		081430131A4CF74A0060E01A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		08B1CA361A0706EA00A772CE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,6 +369,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		08142FF91A4CF74A0060E01A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				081430251A4CF89A0060E01A /* WwdChartBar.m in Sources */,
+				081430281A4D13250060E01A /* ViewController2.m in Sources */,
+				0814302B1A4D4EBA0060E01A /* WwdCharBarData.m in Sources */,
+				081430051A4CF74A0060E01A /* AppDelegate.m in Sources */,
+				081430021A4CF74A0060E01A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		081430111A4CF74A0060E01A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0814301C1A4CF74A0060E01A /* WwdChartBarTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		08B1CA341A0706EA00A772CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -238,6 +411,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		081430171A4CF74A0060E01A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 08142FFC1A4CF74A0060E01A /* WwdChartBar */;
+			targetProxy = 081430161A4CF74A0060E01A /* PBXContainerItemProxy */;
+		};
 		08B1CA531A0706EB00A772CE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 08B1CA371A0706EA00A772CE /* WWDChartLine */;
@@ -246,6 +424,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		081430091A4CF74A0060E01A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0814300A1A4CF74A0060E01A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		08B1CA451A0706EB00A772CE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -257,6 +443,70 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0814301D1A4CF74A0060E01A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WwdChartBar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		0814301E1A4CF74A0060E01A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = WwdChartBar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		0814301F1A4CF74A0060E01A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WwdChartBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WwdChartBar.app/WwdChartBar";
+			};
+			name = Debug;
+		};
+		081430201A4CF74A0060E01A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WwdChartBarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WwdChartBar.app/WwdChartBar";
+			};
+			name = Release;
+		};
 		08B1CA591A0706EB00A772CE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -398,6 +648,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		081430211A4CF74A0060E01A /* Build configuration list for PBXNativeTarget "WwdChartBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0814301D1A4CF74A0060E01A /* Debug */,
+				0814301E1A4CF74A0060E01A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		081430221A4CF74A0060E01A /* Build configuration list for PBXNativeTarget "WwdChartBarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0814301F1A4CF74A0060E01A /* Debug */,
+				081430201A4CF74A0060E01A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		08B1CA331A0706EA00A772CE /* Build configuration list for PBXProject "WWDChartLine" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -414,6 +680,7 @@
 				08B1CA5D1A0706EB00A772CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		08B1CA5E1A0706EB00A772CE /* Build configuration list for PBXNativeTarget "WWDChartLineTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +689,7 @@
 				08B1CA601A0706EB00A772CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
