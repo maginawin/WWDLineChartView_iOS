@@ -41,9 +41,74 @@ int test = 0;
     _textColor = [UIColor blackColor];
     _bgColor = [UIColor whiteColor];
     self.backgroundColor = _bgColor;
+    _xDiffDistance = 0.0f;
+    
+    
+    //轻扫手势
+    for (int i = 0; i < 2; i++) {
+        UISwipeGestureRecognizer* swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
+        swipeGesture.numberOfTouchesRequired = 1;
+        swipeGesture.direction = 1 << i;
+        [self addGestureRecognizer:swipeGesture];
+    }
+    
+    //拖动手势
+//    UIPanGestureRecognizer* panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
+//    panGesture.minimumNumberOfTouches = 1;
+//    panGesture.maximumNumberOfTouches = 2;
+//    [self addGestureRecognizer:panGesture];
+}
+
+- (void)handleSwipe:(UISwipeGestureRecognizer*)gesture{
+    NSUInteger direction = gesture.direction;
+    switch (direction) {
+        case UISwipeGestureRecognizerDirectionLeft:{
+            CATransition* transition = [CATransition animation];
+            transition.duration = 0.2f;
+            transition.type = kCATransitionPush;
+            transition.subtype = kCATransitionFromRight;
+            [self.layer addAnimation:transition forKey:@"animation"];
+            break;
+        }
+        case UISwipeGestureRecognizerDirectionRight:{
+            CATransition* transition = [CATransition animation];
+            transition.duration = 0.2f;
+            transition.type = kCATransitionPush;
+            transition.subtype = kCATransitionFromLeft;
+            [self.layer addAnimation:transition forKey:@"animation"];
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+- (void)handlePan:(UIPanGestureRecognizer*)gesture{
+    CGPoint velocity = [gesture velocityInView:self]; //速度
+    CGPoint transloation = [gesture translationInView:self]; //位移
+    if (transloation.x < self.frame.size.width / 2) {
+        _xDiffDistance = transloation.x;
+        [self setNeedsDisplay];
+    }else{
+//        [UIView beginAnimations:@"animation" context:nil];
+//        [UIView setAnimationDuration:0.5f];
+//        [UIView setAnimationTransition:UIViewAnimationTransitionNone
+//                               forView:self cache:YES];
+//        [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+//        [UIView commitAnimations];
+        CATransition* transition = [CATransition animation];
+        transition.duration = 0.5f;
+        transition.type = kCATransitionPush;
+        transition.subtype = kCATransitionFromLeft;
+        [self.layer addAnimation:transition forKey:@"animation"];
+        _xDiffDistance = 0;
+        [self setNeedsDisplay];
+    }
 }
 
 - (void)drawRect:(CGRect)rect{
+    
+    
     WwdCharBarData* data1 = [[WwdCharBarData alloc]initWithValue:100 andKey:@"21"];
     WwdCharBarData* data2 = [[WwdCharBarData alloc]initWithValue:150 andKey:@"22"];
     WwdCharBarData* data3 = [[WwdCharBarData alloc]initWithValue:200 andKey:@"23"];
@@ -104,7 +169,7 @@ int test = 0;
         WwdCharBarData* barData = [valueAndKeyArray objectAtIndex:i];
         CGFloat yTop = yZero - barData.value / perYaxisValue; //计算出实际应该的高度
         CGContextBeginPath(ctx);
-        const CGPoint points1[] = {CGPointMake(contentWidth * i + halfContentWidth, yZero), CGPointMake(contentWidth * i + halfContentWidth, yTop)};
+        const CGPoint points1[] = {CGPointMake(contentWidth * i + halfContentWidth + _xDiffDistance, yZero), CGPointMake(contentWidth * i + halfContentWidth + _xDiffDistance, yTop)};
         CGContextAddLines(ctx, points1, 2);
         CGContextClosePath(ctx);
         CGContextStrokePath(ctx);
@@ -144,6 +209,36 @@ int test = 0;
     NSString* hourStr = @"(H)";
     [hourStr drawAtPoint:CGPointMake(20, BOTTOM_INTERVAL - 10) withAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont systemFontOfSize:13], NSFontAttributeName, _textColor, NSForegroundColorAttributeName, nil]];
     
+}
+
+#pragma mark -
+#pragma mark touch handing
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+//    CGPoint touchLocation = [[touches anyObject] locationInView:self];
+//    CGPoint previouseLocation = [[touches anyObject] previousLocationInView:self];
+//    float xDifference = touchLocation.x - previouseLocation.x;
+//    _xDiffDistance = xDifference;
+//    [self setNeedsDisplay];
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    CGPoint touchLocation = [[touches anyObject] locationInView:self];
+    CGPoint previouseLocaiton = [[touches anyObject] previousLocationInView:self];
+    float xDifference = touchLocation.x - previouseLocaiton.x;
+    NSLog(@"%lf", xDifference);
+}
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
+    return YES;
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+    return NO;
 }
 
 - (void)testLayer:(CALayer*)subLayer{
